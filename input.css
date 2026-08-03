@@ -2,33 +2,43 @@
 
 @theme {
   /* Khai báo màu sắc */
-  --color-brand-600: #239ab9;       
-  --color-bg: #6dc6dc;              
-  --color-border: #5c5858;          
+  --color-brand-600: #239ab9;
+  --color-bg: #6dc6dc;
+  --color-border: #5c5858;
+  --color-line: #6dc6dc;
+  --color-surface-alt: #6dc6dc;
+  --color-muted: #4b5563;
 
-  
-  --color-ink: #000000;           
-  --color-ink-secondary: #ffffff;   
+  --color-ink: #000000 ;
+  --color-ink-secondary: #ffffff ;
 
-  
   --font-display: "Black Ops One", cursive;
   --font-body: "Montserrat", system-ui, sans-serif;
-  
-  --radius-card: 0.875rem;          
+
+  --radius-card: 0.875rem;
 }
+
 @layer components {
-  /* Khung chứa nội dung canh giữa, giới hạn chiều rộng */
-  .section { 
-    @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28; 
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
+  }
+  .feature-name {
+    @apply mt-5 text-lg font-bold text-brand-600;
+  }
+  .card {
+    border-radius: var(--radius-card);
+    @apply border border-line bg-surface-alt p-6;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors;
   }
 
-  /* Định dạng nút cơ bản */
-  .btn { 
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors; 
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:brightness-110;
   }
 
-  /* Định dạng nút chính (màu đỏ thương hiệu) */
-  .btn-primary { 
-    @apply bg-brand-600 text-white hover:brightness-110; 
+  /* Ảnh */
+  .img-banner {
+    @apply w-80 h-60 object-cover rounded-lg;
   }
 }
