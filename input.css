@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  /* Khai báo màu sắc */
+  --color-brand-600: #239ab9;       
+  --color-bg: #6dc6dc;              
+  --color-border: #5c5858;          
+
+  
+  --color-ink: #000000;           
+  --color-ink-secondary: #ffffff;   
+
+  
+  --font-display: "Black Ops One", cursive;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  
+  --radius-card: 0.875rem;          
+}
+@layer components {
+  /* Khung chứa nội dung canh giữa, giới hạn chiều rộng */
+  .section { 
+    @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28; 
+  }
+
+  /* Định dạng nút cơ bản */
+  .btn { 
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors; 
+  }
+
+  /* Định dạng nút chính (màu đỏ thương hiệu) */
+  .btn-primary { 
+    @apply bg-brand-600 text-white hover:brightness-110; 
+  }
+}
