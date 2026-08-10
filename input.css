@@ -25,9 +25,19 @@
   .feature-name {
     @apply mt-5 text-lg font-bold text-brand-600;
   }
+  .new-line {
+    @apply mt-2 font-semibold;
+  }
   .card {
     border-radius: var(--radius-card);
     @apply border border-line bg-surface-alt p-6;
+  }
+  .pricing-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .font-chu {
+    @apply flex items-center gap-2 font-display;
   }
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors;
