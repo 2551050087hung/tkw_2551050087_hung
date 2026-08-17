@@ -1,54 +1,417 @@
 @import "tailwindcss";
 
 @theme {
-  /* Khai báo màu sắc */
+  /* =========================
+     MÀU SẮC
+     ========================= */
+  --color-brand-500: #38bdf8;
   --color-brand-600: #239ab9;
-  --color-bg: #6dc6dc;
-  --color-border: #5c5858;
-  --color-line: #6dc6dc;
-  --color-surface-alt: #6dc6dc;
-  --color-muted: #4b5563;
+  --color-brand-700: #14738e;
 
-  --color-ink: #000000 ;
-  --color-ink-secondary: #ffffff ;
+  --color-bg: #f5fbfd;
+  --color-border: #dbe7eb;
+  --color-line: #d9e8ed;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eef9fc;
 
+  --color-muted: #64748b;
+
+  --color-ink: #0f172a;
+  --color-ink-secondary: #ffffff;
+
+  /* =========================
+     FONT
+     ========================= */
   --font-display: "Black Ops One", cursive;
   --font-body: "Montserrat", system-ui, sans-serif;
 
-  --radius-card: 0.875rem;
+  /* =========================
+     BO GÓC
+     ========================= */
+  --radius-card: 1rem;
 }
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-bg text-ink font-body;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  ul {
+    @apply list-none p-0;
+  }
+}
+
+/* =========================================
+   COMPONENTS
+   ========================================= */
+
 @layer components {
+
+  /* ---------- SECTION ---------- */
+
   .section {
     @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
   }
+
+
+  /* ---------- TIÊU ĐỀ ---------- */
+
   .feature-name {
     @apply mt-5 text-lg font-bold text-brand-600;
   }
-  .new-line {
-    @apply mt-2 font-semibold;
+
+  .feature-font {
+    @apply mt-3 text-base font-semibold leading-7 text-ink;
   }
+
+  .new-line {
+    @apply mt-2 font-medium leading-7 text-muted;
+  }
+
+
+  /* ---------- CARD ---------- */
+
   .card {
     border-radius: var(--radius-card);
-    @apply border border-line bg-surface-alt p-6;
+
+    @apply border border-line
+           bg-white
+           p-6
+           shadow-sm
+           transition-all
+           duration-300
+           hover:-translate-y-1
+           hover:border-brand-500
+           hover:shadow-lg;
   }
+
+
+  /* ---------- CARD ĐẶC QUYỀN ---------- */
+
+  .dinhdang {
+    @apply mx-auto text-lg font-semibold text-muted;
+  }
+
+
+  /* ---------- PRICING ---------- */
+
   .pricing-card {
-    display: flex;
-    flex-direction: column;
+    @apply flex flex-col
+           rounded-2xl
+           border border-line
+           bg-white
+           p-7
+           shadow-sm
+           transition-all
+           duration-300
+           hover:-translate-y-1
+           hover:shadow-xl;
   }
+
+
+  /* ---------- FONT DISPLAY ---------- */
+
   .font-chu {
     @apply flex items-center gap-2 font-display;
   }
+
+
+  /* ---------- BUTTON ---------- */
+
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors;
+    @apply inline-flex
+           items-center
+           justify-center
+           gap-2
+           rounded-full
+           px-5
+           py-2.5
+           text-sm
+           font-semibold
+           transition-all
+           duration-200
+           focus:outline-none
+           focus:ring-2
+           focus:ring-brand-500
+           focus:ring-offset-2;
   }
 
   .btn-primary {
-    @apply bg-brand-600 text-white hover:brightness-110;
+    @apply bg-brand-600
+           text-white
+           shadow-md
+           hover:bg-brand-700
+           hover:shadow-lg
+           active:scale-95;
   }
 
-  /* Ảnh */
+  .btn-secondary {
+    @apply border
+           border-line
+           bg-white
+           text-ink
+           hover:border-brand-500
+           hover:text-brand-600;
+  }
+
+
+  /* ---------- ẢNH ---------- */
+
   .img-banner {
-    @apply w-80 h-60 object-cover rounded-lg;
+    @apply h-60
+           w-80
+           rounded-2xl
+           object-cover
+           shadow-lg;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .site-header {
+    @apply sticky
+           top-0
+           z-50
+           border-b
+           border-line
+           bg-white/90
+           backdrop-blur-md;
+  }
+
+  .nav-container {
+    @apply mx-auto
+           flex
+           max-w-6xl
+           items-center
+           justify-between
+           px-5
+           py-4;
+  }
+
+  .nav-list {
+    @apply hidden
+           items-center
+           gap-8
+           md:flex;
+  }
+
+  .nav-link {
+    @apply text-sm
+           font-semibold
+           text-muted
+           hover:text-brand-600;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    @apply relative
+           overflow-hidden
+           bg-gradient-to-br
+           from-surface-alt
+           via-white
+           to-sky-100;
+  }
+
+  .hero-container {
+    @apply mx-auto
+           grid
+           max-w-6xl
+           items-center
+           gap-12
+           px-5
+           py-24
+           md:grid-cols-2
+           lg:py-32;
+  }
+
+  .hero-title {
+    @apply text-4xl
+           font-extrabold
+           leading-tight
+           tracking-tight
+           text-ink
+           sm:text-5xl
+           lg:text-6xl;
+  }
+
+  .hero-text {
+    @apply mt-6
+           max-w-xl
+           text-lg
+           leading-8
+           text-muted;
+  }
+
+
+  /* ---------- PARTNER ---------- */
+
+  .partner-section {
+    @apply border-y
+           border-line
+           bg-white;
+  }
+
+  .partner-list {
+    @apply mt-8
+           flex
+           flex-wrap
+           items-center
+           justify-center
+           gap-10
+           md:gap-16;
+  }
+
+  .partner-item {
+    @apply flex
+           items-center
+           gap-3
+           text-lg
+           font-bold
+           text-muted;
+  }
+
+
+  /* ---------- FEATURE GRID ---------- */
+
+  .feature-grid {
+    @apply mt-12
+           grid
+           gap-6
+           sm:grid-cols-2
+           lg:grid-cols-3;
+  }
+
+
+  /* ---------- STATS ---------- */
+
+  .stats-section {
+    @apply bg-surface-alt;
+  }
+
+  .stats-grid {
+    @apply mt-12
+           grid
+           gap-6
+           sm:grid-cols-2
+           lg:grid-cols-3;
+  }
+
+  .stat-card {
+    @apply rounded-2xl
+           border
+           border-line
+           bg-white
+           p-7
+           text-center
+           shadow-sm;
+  }
+
+  .stat-number {
+    @apply block
+           text-3xl
+           font-extrabold
+           text-brand-600;
+  }
+
+
+  /* ---------- FAQ ---------- */
+
+  .faq-list {
+    @apply mx-auto
+           mt-10
+           max-w-3xl
+           space-y-4;
+  }
+
+  .faq-item {
+    @apply rounded-xl
+           border
+           border-line
+           bg-white
+           px-5
+           py-4
+           shadow-sm;
+  }
+
+  .faq-summary {
+    @apply cursor-pointer
+           font-semibold
+           text-ink
+           hover:text-brand-600;
+  }
+
+
+  /* ---------- CTA ---------- */
+
+  .cta-section {
+    @apply bg-gradient-to-r
+           from-brand-600
+           to-cyan-500
+           text-white;
+  }
+
+  .cta-container {
+    @apply mx-auto
+           max-w-4xl
+           px-5
+           py-20
+           text-center;
+  }
+
+  .cta-title {
+    @apply text-3xl
+           font-extrabold
+           sm:text-4xl;
+  }
+
+  .cta-text {
+    @apply mx-auto
+           mt-5
+           max-w-2xl
+           text-white/90
+           leading-7;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .site-footer {
+    @apply bg-slate-950
+           text-white;
+  }
+
+  .footer-container {
+    @apply mx-auto
+           grid
+           max-w-6xl
+           gap-10
+           px-5
+           py-14
+           md:grid-cols-3;
+  }
+
+  .footer-title {
+    @apply text-lg
+           font-bold;
+  }
+
+  .footer-link {
+    @apply text-sm
+           text-slate-400
+           hover:text-white;
   }
 }
