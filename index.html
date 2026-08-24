@@ -1,402 +1,205 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nền tảng lưu trữ đám mây nhanh, an toàn và tiện lợi.">
     <title>Trang Chủ - Lưu Trữ Đám Mây</title>
-    <link rel="stylesheet" href="output.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4"></nav>
-    </header>
     <header class="site-header">
-        <div class="nav-container">
-            <a href="/" class="font-chu text-xl text-brand-600" aria-label="Trang chủ Nền tảng lưu trữ" >
-                <img src="logo.svg" alt="Trang chủ Nền tảng lưu trữ"  width="45" height="45">
-                <span>
-                    Lưu Trữ
-                </span>
-            </a>
-            <nav aria-label="Menu điều hướng">
+        <div class="container header-container">
+            <!-- Menu Điều hướng -->
+            <nav id="nav-menu" class="nav-menu" aria-label="Điều hướng chính">
                 <ul class="nav-list">
-                    <li>
-                        <a href="#tinh-nang" class="nav-link">Tính năng</a>
-                    </li>
-                    <li>
-                        <a href="#pricing" class="nav-link">Bảng giá</a>
-                    </li>
-                    <li>
-                        <a href="#faq" class="nav-link">Hỏi đáp</a>
-                    </li>
+                    <li><a href="#tinh-nang">Tính năng</a></li>
+                    <li><a href="./prices.html">Bảng giá</a></li>
+                    <li><a href="#faq">Hỏi đáp</a></li>
                 </ul>
             </nav>
-            <button type="button" class="btn btn-primary">Đăng nhập</button>
+
+            <!-- Các nút thao tác -->
+            <div class="header-actions">
+                <!-- Nút Đổi Dark / Light Mode -->
+                <button type="button" id="theme-toggle" class="btn-icon" aria-label="Đổi giao diện">
+                    <span id="theme-icon">🌙</span>
+                </button>
+
+                <a href="web.html" class="btn-secondary btn-login">Đăng nhập</a>
+
+                <!-- Nút Hamburger Menu (Mobile) -->
+                <button type="button" id="hamburger-btn" class="hamburger-btn" aria-label="Mở menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </header>
+
     <main id="main">
-        <section class="hero" aria-labelledby="hero-heading">
-            <div class="hero-container">
-                <div>
-                    <p class="text-sm font-bold uppercase tracking-widest text-brand-600">Lưu trữ đám mây</p>
-                    <h1 id="hero-heading" class="hero-title">Lưu Trữ Nhanh - <br>An Toàn</h1>
-                    <p class="hero-text">
-                        Tốc độ cao - Tiện lợi - An toàn.
-                        Lưu trữ dữ liệu của bạn mọi lúc,
-                        mọi nơi trên nền tảng đám mây.
-                    </p>
-                    <div class="mt-8 flex flex-wrap gap-4">
-                        <button type="button" class="btn btn-primary px-7 py-3">Sử dụng miễn phí 1 tháng </button>
-                        <a href="#tinh-nang" class="btn btn-secondary px-7 py-3">  Xem tính năng </a>
-                    </div>
-                </div>
-                <div class="flex justify-center">
-                    <img
-                        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
-                        alt="Hệ thống máy chủ lưu trữ dữ liệu"
-                        class="img-banner h-80 w-full md:w-96"
-                    >
-                </div>
+        <section aria-labelledby="hero-heading" class="hero-section">
+            <div class="container" style="max-width: 48rem;">
+                <h1 id="hero-heading" class="hero-title">Lưu Trữ Nhanh - An Toàn</h1>
+                <p class="hero-subtitle">Tốc độ cao • Tiện lợi • An toàn bảo mật tuyệt đối</p>
             </div>
         </section>
-        <section class="partner-section" aria-labelledby="doitac-title">
-            <div class="section py-12">
-                <h2 id="doitac-title" class="text-center text-sm font-semibold text-muted">Các đối tác và nhà cung cấp</h2>
-                <ul class="partner-list">
+
+        <section class="partners-section" aria-labelledby="doitac-title">
+            <div class="container">
+                <h2 id="doitac-title" class="section-label">Các đối tác và nhà cung cấp</h2>
+                <ul class="partners-list">
                     <li class="partner-item">
-                        <img
-                            src="https://media.wired.com/photos/5926ffe47034dc5f91bed4e8/3:2/w_960,c_limit/google-logo.jpg"
-                            width="60"
-                            height="40"
-                            alt="Google"
-                            class="rounded object-contain"
-                        >
-                        <span>
-                            Google
-                        </span>
+                        <img src="https://media.wired.com/photos/5926ffe47034dc5f91bed4e8/3:2/w_960,c_limit/google-logo.jpg" width="40" height="26" alt="Google" style="border-radius: 4px;">
+                        <span>Google</span>
                     </li>
                     <li class="partner-item">
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/6/6f/C%E1%BB%91c_C%E1%BB%91c_logo.svg"
-                            width="60"
-                            height="40"
-                            alt="Trình duyệt Cốc Cốc"
-                            class="object-contain"
-                        >
-                        <span>
-                            Cốc Cốc
-                        </span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/C%E1%BB%91c_C%E1%BB%91c_logo.svg" width="32" height="32" alt="Cốc Cốc">
+                        <span>Cốc Cốc</span>
                     </li>
                 </ul>
             </div>
         </section>
-        <section id="tinh-nang" class="section" aria-labelledby="tinh-nang-title">
-            <div class="max-w-2xl">
-                <p class="text-xs font-semibold uppercase text-brand-600">Tính năng</p>
-                <h2 id="tinh-nang-title" class="mt-4 text-3xl font-extrabold sm:text-4xl">Tính năng nổi bật của nền tảng</h2>
+
+        <section id="tinh-nang" class="features-section container" aria-labelledby="tinh-nang-title">
+            <div style="max-width: 42rem;">
+                <p class="section-tag">Tính Năng</p>
+                <h2 id="tinh-nang-title" class="section-title">Tính năng nổi bật của nền tảng</h2>
             </div>
-            <ul class="feature-grid">
+            <ul class="grid-3">
                 <li class="card">
-                    <div class="text-3xl">
-                        ⚡
-                    </div>
-                    <h3 class="feature-name">
-                        Tốc độ cao
-                    </h3>
-                    <p class="new-line">
-                        Không lo nghẽn mạng.
-                        Tải dữ liệu nhanh chóng và ổn định.
-                    </p>
+                    <h3 class="card-title">Tốc độ cao</h3>
+                    <p class="card-desc">Không lo nghẽn mạng với hạ tầng băng thông tối ưu.</p>
                 </li>
                 <li class="card">
-                    <div class="text-3xl">
-                        ☁️
-                    </div>
-                    <h3 class="feature-name">
-                        Dung lượng lưu trữ lớn
-                    </h3>
-                    <p class="new-line">
-                        Không sợ đầy vì đã có 32GB miễn phí
-                        và nhiều hơn khi đăng ký thêm.
-                    </p>
+                    <h3 class="card-title">Dung lượng lớn</h3>
+                    <p class="card-desc">Nhận ngay 32GB miễn phí, dễ dàng mở rộng khi có nhu cầu.</p>
                 </li>
                 <li class="card">
-                    <div class="text-3xl">
-                        🔒
-                    </div>
-                    <h3 class="feature-name">
-                        Bảo Mật Cao
-                    </h3>
-                    <p class="new-line">
-                        An toàn, hạn chế nguy cơ
-                        thất thoát dữ liệu.
-                    </p>
-                </li>
-                <li class="card">
-                    <div class="text-3xl">
-                        📱
-                    </div>
-                    <h3 class="feature-name">
-                        Tiện lợi
-                    </h3>
-                    <p class="new-line">
-                        Sử dụng được trên mọi thiết bị
-                        như điện thoại, laptop và desktop.
-                    </p>
+                    <h3 class="card-title">Bảo Mật Cao</h3>
+                    <p class="card-desc">Mã hóa toàn bộ dữ liệu, an tâm lưu trữ không lo rò rỉ.</p>
                 </li>
             </ul>
         </section>
-        <section id="uu-dai" class="stats-section" aria-labelledby="stats-heading">
-            <div class="section">
-                <div class="text-center">
-                    <p class="feature-name">CÁC ĐẶC QUYỀN VÀ ƯU ĐÃI</p>
-                    <h2 id="stats-heading" class="mt-5 text-3xl font-extrabold text-brand-600">Ưu đãi nền tảng</h2>
+
+        <!-- Thống kê & Ưu đãi -->
+        <section aria-labelledby="stats-heading" class="stats-section">
+            <div class="container">
+                <div style="text-align: center;">
+                    <p class="section-tag">CÁC ĐẶC QUYỀN VÀ ƯU ĐÃI</p>
+                    <h2 id="stats-heading" class="section-title">Ưu đãi nền tảng</h2>
                 </div>
                 <ul class="stats-grid">
                     <li class="stat-card">
-                        <strong class="stat-number">
-                            32GB
-                        </strong>
-                        <p class="feature-font">
-                            Miễn phí dung lượng
-                        </p>
-                        <p class="new-line">
-                            Miễn phí dung lượng lưu trữ
-                            lớn cho người dùng.
-                        </p>
+                        <strong class="stat-number">32 GB</strong>
+                        <p class="stat-label">Miễn phí dung lượng khởi tạo cho người dùng mới</p>
                     </li>
                     <li class="stat-card">
-                        <strong class="stat-number">
-                            1 Triệu+
-                        </strong>
-                        <p class="feature-font">
-                            Người dùng
-                        </p>
-                        <p class="new-line">
-                            Được nhiều người dùng
-                            tin tưởng và đăng ký.
-                        </p>
+                        <strong class="stat-number">1 Triệu+</strong>
+                        <p class="stat-label">Người dùng tin tưởng đăng ký và sử dụng</p>
                     </li>
                     <li class="stat-card">
-                        <strong class="stat-number">
-                            24/7
-                        </strong>
-                        <p class="feature-font">
-                            Đội ngũ CSKH chuyên nghiệp
-                        </p>
-                        <p class="new-line">
-                            Luôn lắng nghe góp ý
-                            và tiếp tục sửa chữa,
-                            nâng cấp nền tảng.
-                        </p>
+                        <strong style="display: block; font-size: 1.25rem; font-weight: 700;">Hỗ trợ 24/7</strong>
+                        <p class="stat-label">Đội ngũ CSKH chuyên nghiệp, lắng nghe và liên tục nâng cấp</p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section id="pricing" class="section" aria-labelledby="pricing-heading">
-            <div class="text-center">
-                <p class="text-xs font-bold uppercase text-brand-600"> Bảng giá</p>
-                <h2 id="pricing-heading" class="mt-4 text-3xl font-extrabold sm:text-4xl">
-                    Chọn gói dịch vụ phù hợp với bạn
-                </h2>
-            </div>
-            <div class="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-2">
-                <article class="pricing-card">
-                    <p class="text-sm font-bold uppercase text-muted">
-                        Gói cơ bản
-                    </p>
-                    <h3 class="mt-3 text-2xl font-extrabold">
-                        Gói Cơ bản
-                    </h3>
-                    <p class="mt-5">
-                        <strong class="text-3xl text-brand-600">
-                            100.000 VNĐ
-                        </strong>
-                        <span class="text-muted">
-                            / Tháng
-                        </span>
-                    </p>
-                    <ul class="mt-7 space-y-3 text-muted">
-                        <li>
-                            ✓ Sử dụng trên 1 thiết bị
-                        </li>
-                        <li>
-                            ✓ Dung lượng lưu trữ 64GB
-                        </li>
-                        <li>
-                            ✓ Đồng bộ dữ liệu
-                        </li>
-                    </ul>
-                    <button type="button" class="btn btn-secondary mt-8 w-full">Đăng ký gói Cơ bản</button>
-                </article>
-                <article class="pricing-card border-2 border-brand-600">
-                    <span class="w-fit rounded-full bg-brand-600 px-3 py-1 text-xs font-bold text-white">
-                        PHỔ BIẾN
-                    </span>
-                    <p class="mt-5 text-sm font-bold uppercase text-brand-600">
-                        Gói gia đình
-                    </p>
-                    <h3 class="mt-3 text-2xl font-extrabold">
-                        Gói Gia Đình
-                    </h3>
-                    <p class="mt-5">
-                        <strong class="text-3xl text-brand-600">
-                            150.000 VNĐ
-                        </strong>
-                        <span class="text-muted">
-                            / Tháng
-                        </span>
-                    </p>
-                    <ul class="mt-7 space-y-3 text-muted">
-                        <li>✓ Chia sẻ cùng lúc 5 thiết bị</li>
-                        <li>✓ Điện thoại / Laptop / Desktop</li>
-                        <li>✓ Dung lượng lưu trữ 128GB</li>
-                        <li>✓ Hỗ trợ khách hàng ưu tiên</li>
-                    </ul>
-                    <button type="button" class="btn btn-primary mt-8 w-full">
-                        Đăng ký gói Gia Đình
-                    </button>
-                </article>
-            </div>
-        </section>
-        <section id="faq" class="section" aria-labelledby="faq-heading">
-            <div class="text-center">
-                <p class="text-xs font-bold uppercase text-brand-600">
-                    Hỏi đáp
-                </p>
-                <h2 id="faq-heading" class="mt-4 text-3xl font-extrabold sm:text-4xl">
-                    Câu hỏi thường gặp
-                </h2>
-            </div>
-            <ul class="faq-list">
-                <li class="faq-item">
-                    <details>
-                        <summary class="faq-summary">
-                            Tôi có thể hủy gói đăng ký bất cứ lúc nào không?
-                        </summary>
-                        <p class="new-line">
-                            Có, bạn hoàn toàn có thể hủy gia hạn
-                            tự động bất cứ lúc nào trong phần
-                            cài đặt quản lý tài khoản.
-                        </p>
-                    </details>
-                </li>
-                <li class="faq-item">
-                    <details>
-                        <summary class="faq-summary">
-                            Nền tảng hỗ trợ trên những thiết bị nào?
-                        </summary>
-                        <p class="new-line">
-                            Chúng tôi hỗ trợ trên các thiết bị
-                            di động, laptop và desktop.
-                        </p>
-                    </details>
-                </li>
-                <li class="faq-item">
-                    <details>
-                        <summary class="faq-summary">
-                            Nền tảng có thường xuyên bảo trì hoặc cập nhật không?
-                        </summary>
-                        <p class="new-line">
-                            Nền tảng chúng tôi sẽ bảo trì và cập nhật
-                            vào đúng ngày 16 hàng tháng từ khoảng
-                            7:00 AM đến 9:00 AM.
-                        </p>
-                    </details>
-                </li>
-            </ul>
-        </section>
-        <section class="cta-section" aria-labelledby="cta-heading">
-            <div class="cta-container">
-                <h2 id="cta-heading" class="cta-title">
-                    Hãy đăng ký để nhận nhiều ưu đãi
-                    và đặc quyền hơn!
-                </h2>
-                <p class="cta-text">
-                    Tạo tài khoản ngay hôm nay để nhận
-                    ưu đãi đặc biệt tháng này dành riêng
-                    cho thành viên mới.
-                </p>
-                <button type="button" class="btn mt-8 bg-white text-brand-600 hover:bg-slate-100">
-                    Tạo tài khoản miễn phí
-                </button>
+
+        <section id="faq" class="faq-section" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 id="faq-heading" class="section-title" style="text-align: center;">Câu hỏi thường gặp</h2>
+                <ul class="faq-container">
+                    <li class="faq-item">
+                        <details>
+                            <summary>
+                                Tôi có thể hủy gói đăng ký bất cứ lúc nào không?
+                                <span>▼</span>
+                            </summary>
+                            <p style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--text-muted);">
+                                Có, bạn hoàn toàn có thể hủy gia hạn tự động bất cứ lúc nào trong phần cài đặt quản lý tài khoản.
+                            </p>
+                        </details>
+                    </li>
+                    <li class="faq-item">
+                        <details>
+                            <summary>
+                                Nền tảng hỗ trợ trên những thiết bị nào?
+                                <span>▼</span>
+                            </summary>
+                            <p style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--text-muted);">
+                                Chúng tôi hỗ trợ ứng dụng đồng bộ trên tất cả thiết bị di động (iOS/Android) và máy tính (Windows/macOS/Linux).
+                            </p>
+                        </details>
+                    </li>
+                    <li class="faq-item">
+                        <details>
+                            <summary>
+                                Nền tảng có bảo mật không?
+                                <span>▼</span>
+                            </summary>
+                            <p style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--text-muted);">
+                                Chúng tôi đảm bảo về bảo mật dữ liệu của bạn với các biện pháp mã hóa tiên tiến và tuân thủ các tiêu chuẩn bảo mật quốc tế.
+                            </p>
+                        </details>
+                    </li>
+                    <li class="faq-item">
+                        <details>
+                            <summary>
+                                Tôi có thể nâng cấp gói dịch vụ không?
+                                <span>▼</span>
+                            </summary>
+                            <p style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--text-muted);">
+                                Có, bạn có thể nâng cấp gói dịch vụ bất cứ lúc nào thông qua trang quản lý tài khoản.
+                            </p>
+                        </details>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
-    <footer class="site-footer" aria-labelledby="footer-heading">
-        <div class="footer-container">
-            <div>
-                <h2 id="footer-heading" class="footer-title">
-                    Nền Tảng Lưu Trữ
-                </h2>
-                <p class="mt-4 text-sm leading-7 text-slate-400">
-                    Lưu trữ nhanh - an toàn -
-                    tiện lợi cho mọi người.
-                </p>
-            </div>
-            <div>
-                <h3 class="footer-title">
-                    Điều hướng
-                </h3>
-                <ul class="mt-4 space-y-3">
-                    <li>
-                        <a href="#tinh-nang" class="footer-link">
-                            Tính năng
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#pricing" class="footer-link">
-                            Bảng giá
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#faq" class="footer-link">
-                            Hỏi đáp
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="footer-title">
-                    Thông tin
-                </h3>
-                <ul class="mt-4 space-y-3">
-                    <li>
-                        <a href="/about" class="footer-link">
-                            Về chúng tôi
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/privacy" class="footer-link">
-                            Chính sách bảo mật
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/terms" class="footer-link">
-                            Điều khoản sử dụng
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/contact" class="footer-link">
-                            Liên hệ hỗ trợ
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="border-t border-slate-800">
-            <p class="py-6 text-center text-sm text-slate-500">
-                &copy; 2026 Nền Tảng Lưu Trữ.
-                Bảo lưu mọi quyền.
-            </p>
+
+    <!-- Footer -->
+    <footer aria-labelledby="footer-heading" class="site-footer">
+        <div class="container footer-container">
+            <h2 id="footer-heading" class="sr-only">Thông tin liên hệ và chính sách</h2>
+            <p>&copy; 2026 Nền Tảng Lưu Trữ. Bảo lưu mọi quyền.</p>
         </div>
     </footer>
-    <script type="module" scr="./js/main.js"></script>
+
+    <!-- Script điều khiển Hamburger & Dark/Light Mode -->
+    <script>
+        // Xử lý Dark / Light Mode
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeIcon.textContent = '☀️';
+            }
+        });
+
+        // Xử lý Hamburger Menu
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

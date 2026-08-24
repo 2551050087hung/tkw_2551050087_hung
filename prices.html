@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Giá - Lưu Trữ Đám Mây</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <!-- Menu Điều hướng -->
+            <nav id="nav-menu" class="nav-menu" aria-label="Điều hướng chính">
+                <ul class="nav-list">
+                    <li><a href="./index.html">Trang Chủ</a></li>
+                    <li><a href="./prices.html">Bảng giá</a></li>
+                    <li><a href="./index.html#faq">Hỏi đáp</a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Các nút thao tác -->
+            <div class="header-actions">
+                <!-- Nút Đổi Dark / Light Mode -->
+                <button type="button" id="theme-toggle" class="btn-icon" aria-label="Đổi giao diện">
+                    <span id="theme-icon">🌙</span>
+                </button>
+
+                <a href="web.html" class="btn-secondary btn-login">Đăng nhập</a>
+
+                <!-- Nút Hamburger Menu (Mobile) -->
+                <button type="button" id="hamburger-btn" class="hamburger-btn" aria-label="Mở menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section aria-labelledby="stats-heading" class="stats-section">
+            <div class="container">
+                <div style="text-align: center;">
+                    <p class="section-tag">CÁC ĐẶC QUYỀN VÀ ƯU ĐÃI</p>
+                    <h2 id="stats-heading" class="section-title">Ưu đãi nền tảng</h2>
+                </div>
+                <ul class="stats-grid">
+                    <li class="stat-card">
+                        <strong class="stat-number">32 GB</strong>
+                        <p class="stat-label">Miễn phí dung lượng khởi tạo cho người dùng mới</p>
+                    </li>
+                    <li class="stat-card">
+                        <strong class="stat-number">1 Triệu+</strong>
+                        <p class="stat-label">Người dùng tin tưởng đăng ký và sử dụng</p>
+                    </li>
+                    <li class="stat-card">
+                        <strong style="display: block; font-size: 1.25rem; font-weight: 700;">Hỗ trợ 24/7</strong>
+                        <p class="stat-label">Đội ngũ CSKH chuyên nghiệp, lắng nghe và liên tục nâng cấp</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section container" aria-labelledby="pricing-heading">
+            <div style="text-align: center;">
+                <h2 id="pricing-heading" class="section-title">Chọn gói dịch vụ phù hợp</h2>
+            </div>
+            <ul class="pricing-grid">
+                <li class="pricing-card">
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Gói Cơ bản</h3>
+                        <p class="price">100.000 VNĐ <span>/ Tháng</span></p>
+                        <ul class="feature-list">
+                            <li>✓ Sử dụng trên 1 thiết bị</li>
+                            <li>✓ Dung lượng lưu trữ 64GB</li>
+                        </ul>
+                    </div>
+                    <a href="auth.html" class="btn-secondary btn-full" style="text-align: center; display: block;">Đăng ký gói Cơ bản</a>
+                </li>
+                <li class="pricing-card popular">
+                    <span class="badge">Phổ biến</span>
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Gói Gia Đình</h3>
+                        <p class="price">150.000 VNĐ <span>/ Tháng</span></p>
+                        <ul class="feature-list">
+                            <li>✓ Chia sẻ lên tới 5 thiết bị (Mobile/Laptop/Desktop)</li>
+                            <li>✓ Dung lượng lưu trữ 128GB</li>
+                        </ul>
+                    </div>
+                    <a href="auth.html" class="btn-primary btn-full" style="text-align: center; display: block;">Đăng ký gói Gia Đình</a>
+                </li>
+                <li class="pricing-card">
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Gói Doanh Nghiệp</h3>
+                        <p class="price">250.000 VNĐ <span>/ Tháng</span></p>
+                        <ul class="feature-list">
+                            <li>✓ Chia sẻ lên tới 10 thiết bị (Mobile/Laptop/Desktop)</li>
+                            <li>✓ Dung lượng lưu trữ 256GB</li>
+                        </ul>
+                    </div>
+                    <a href="auth.html" class="btn-secondary btn-full" style="text-align: center; display: block;">Đăng ký gói Doanh Nghiệp</a>
+                </li>
+                <li class="pricing-card">
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Gói Cao Cấp</h3>
+                        <p class="price">500.000 VNĐ <span>/ Tháng</span></p>
+                        <ul class="feature-list">
+                            <li>✓ Chia sẻ lên tới 20 thiết bị (Mobile/Laptop/Desktop)</li>
+                            <li>✓ Dung lượng lưu trữ 512GB</li>
+                        </ul>
+                    </div>
+                    <a href="auth.html" class="btn-secondary btn-full" style="text-align: center; display: block;">Đăng ký gói Cao Cấp</a>
+                </li>
+            </ul>
+        </section>  
+    </main>
+
+    <!-- Footer -->
+    <footer aria-labelledby="footer-heading" class="site-footer">
+        <div class="container footer-container">
+            <h2 id="footer-heading" class="sr-only">Thông tin liên hệ và chính sách</h2>
+            <p>&copy; 2026 Nền Tảng Lưu Trữ. Bảo lưu mọi quyền.</p>
+        </div>
+    </footer>
+
+    <!-- Script điều khiển Hamburger & Dark/Light Mode -->
+    <script>
+        // Xử lý Dark / Light Mode
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeIcon.textContent = '☀️';
+            }
+        });
+
+        // Xử lý Hamburger Menu
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

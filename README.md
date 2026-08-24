@@ -44,13 +44,3 @@ figma Tailwindcss
 9999 rounded-full: bo tròn hoàn toàn
 
 1rem = 16px
-
-
-
-cac breakpoints:
-
-sm (cac thiet man hinh nho): 640px
-md (thiet bi may tinh bang): 640-768px
-lg (man hinh may tinh xay tay/laptop): 768-1024px
-xl (man hinh desktop): 1024-1280px
-xxl (man hinh cuc lon): 1280 tro di
